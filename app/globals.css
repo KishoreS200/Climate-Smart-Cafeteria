@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 84 30% 98%;
+    --foreground: 120 10% 10%;
+
+    --card: 84 30% 98%;
+    --card-foreground: 120 10% 10%;
+
+    --popover: 84 30% 98%;
+    --popover-foreground: 120 10% 10%;
+
+    --primary: 142 43% 42%;
+    --primary-foreground: 142 43% 98%;
+
+    --secondary: 36 43% 56%;
+    --secondary-foreground: 36 43% 12%;
+
+    --muted: 84 20% 92%;
+    --muted-foreground: 120 5% 40%;
+
+    --accent: 196 30% 56%;
+    --accent-foreground: 196 30% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 5% 88%;
+    --input: 120 5% 88%;
+    --ring: 142 43% 42%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 120 10% 8%;
+    --foreground: 84 30% 90%;
+
+    --card: 120 10% 10%;
+    --card-foreground: 84 30% 90%;
+
+    --popover: 120 10% 10%;
+    --popover-foreground: 84 30% 90%;
+
+    --primary: 142 43% 42%;
+    --primary-foreground: 142 43% 98%;
+
+    --secondary: 36 43% 40%;
+    --secondary-foreground: 36 43% 98%;
+
+    --muted: 120 10% 15%;
+    --muted-foreground: 120 5% 65%;
+
+    --accent: 196 30% 30%;
+    --accent-foreground: 196 30% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 5% 20%;
+    --input: 120 5% 20%;
+    --ring: 142 43% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for carbon score badges */
+.carbon-low {
+  @apply bg-carbon-low/20 text-carbon-low dark:bg-carbon-low/30 dark:text-carbon-low/90;
+}
+
+.carbon-medium {
+  @apply bg-carbon-medium/20 text-carbon-medium/90 dark:bg-carbon-medium/30 dark:text-carbon-medium/90;
+}
+
+.carbon-high {
+  @apply bg-carbon-high/20 text-carbon-high/90 dark:bg-carbon-high/30 dark:text-carbon-high/90;
+}
