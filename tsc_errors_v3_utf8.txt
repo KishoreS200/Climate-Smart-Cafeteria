@@ -1,0 +1,10 @@
+﻿app/api/auth/signup/route.ts(61,35): error TS2339: Property 'PrismaClientKnownRequestError' does not exist on type 'typeof Prisma'.
+app/api/auth/signup/route.ts(63,13): error TS18046: 'error' is of type 'unknown'.
+components/ui/sidebar.tsx(674,9): error TS2322: Type 'CSSProperties' is not assignable to type 'Properties<string | number, string & {}>'.
+  Types of property 'borderBlockStyle' are incompatible.
+    Type 'import("C:/Users/KISHORE S/OneDrive/Desktop/csc/Climate-Smart-Cafeteria/node_modules/csstype/index").Property.BorderBlockStyle | undefined' is not assignable to type 'import("C:/Users/KISHORE S/node_modules/csstype/index").Property.BorderBlockStyle | undefined'.
+      Type 'string & {}' is not assignable to type 'BorderBlockStyle | undefined'.
+context/auth-context.tsx(78,7): error TS2322: Type 'React.ReactNode' is not assignable to type 'import("C:/Users/KISHORE S/OneDrive/Desktop/csc/Climate-Smart-Cafeteria/node_modules/@types/react/index").ReactNode'.
+  Type 'ReactElement<unknown, string | JSXElementConstructor<any>>' is not assignable to type 'ReactNode'.
+    Property 'children' is missing in type 'ReactElement<unknown, string | JSXElementConstructor<any>>' but required in type 'ReactPortal'.
+lib/db.ts(18,15): error TS7006: Parameter 'error' implicitly has an 'any' type.

@@ -15,7 +15,7 @@ function createPrismaClient() {
       .then(() => {
         console.log('Successfully connected to the database')
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error('Failed to connect to the database:', error)
       })
 

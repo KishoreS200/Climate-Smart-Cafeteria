@@ -55,17 +55,14 @@ export async function POST(req: Request) {
         },
         { status: 201 }
       )
-    } catch (error) {
+    } catch (error: any) {
       console.error('Database operation failed:', error)
       
-      if (error instanceof Prisma.PrismaClientKnownRequestError) {
-        // Handle known Prisma errors
-        if (error.code === 'P2002') {
-          return NextResponse.json(
-            { message: "This email is already registered" },
-            { status: 400 }
-          )
-        }
+      if (error && error.code === 'P2002') {
+        return NextResponse.json(
+          { message: "This email is already registered" },
+          { status: 400 }
+        )
       }
 
       return NextResponse.json(
